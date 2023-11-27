@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Pizza";
+    src: url(/fonts/New\ Pizza.otf);
+}
+
+@font-face {
+    font-family: "kitchen";
+    src: url(/fonts/Kitchen\ Restaurant.otf);
+}
+
+.pizza {
+    font-family: "Pizza";
+}
+
+.kit{
+    font-family: "kitchen";
+}
