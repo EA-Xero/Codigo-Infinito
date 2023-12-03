@@ -10,3 +10,10 @@ app.get("/canciones",(req,res)=>{
     const canciones = JSON.parse(fs.readFileSync("canciones.json"))
     res.send(canciones)
 })
+
+app.post("/canciones",(req,res)=>{
+    const canciones = JSON.parse(fs.readFileSync("canciones.json"))
+    canciones.push(req.body)
+    fs.writeFileSync("canciones.json",JSON.stringify(canciones))
+    res.send(canciones)
+})

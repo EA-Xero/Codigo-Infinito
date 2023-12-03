@@ -76,7 +76,7 @@
 </style>
 
 <script>
-  let url = "/canciones";
+  let url = "http://localhost:3000/canciones";
   let tbody = document.getElementById("cuerpo");
   let cancion = document.getElementById("cancion");
   let artista = document.getElementById("artista");
@@ -86,7 +86,7 @@
   window.onload = getData();
 
   async function getData() {
-    await axios.get(`http://localhost:3000${url}`).then((data) => {
+    await axios.get(url).then((data) => {
       console.log(data);
       canciones = data.data;
       tbody.innerHTML = "";
