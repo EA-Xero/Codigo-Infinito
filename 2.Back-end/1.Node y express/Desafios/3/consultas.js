@@ -2,11 +2,11 @@
 const {Pool} = require('pg')
 
 const pool = new Pool({
-    user: 'Postgres',
+    user: 'postgres',
     host:'localhost',
     database:'likeme',
     password:'321',
-    allowExitOnIdle
+    allowExitOnIdle: true
 })
 
 const newpost = async (titulo,img,descripcion,likes) =>{
