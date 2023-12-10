@@ -9,12 +9,12 @@ const pool = new Pool({
     allowExitOnIdle: true
 })
 
-const newpost = async (titulo,img,descripcion,likes) =>{
+const newpost = async (titulo,url,descripcion,likes) =>{
     const consulta = "insert into posts values (Default,$1,$2,$3,$4)"
-    const values = [titulo,img,descripcion,likes]
+    const values = [titulo,url,descripcion,likes]
     const result = await pool.query(consulta,values)
-    console.log(result)
     console.log("Post agregado")
+    console.log("Datos recibidos en newpost:", titulo, url, descripcion, likes);
 }
 
 const leerposts = async()=>{

@@ -15,14 +15,10 @@ app.get("/posts",async (req,res)=>{
     res.json(posts)
 })
 
-/* app.post("./posts",async (req,res)=>{
-    const { titulo, img, descripcion, likes } = req.body
-    await newpost( titulo, img, descripcion, likes )
-    res.send("Post agregado con exito")
-}) */
 
 app.post("/posts", async (req, res) => {
-    const { titulo, img, descripcion, likes } = req.body;
-    await newpost(titulo, img, descripcion, likes);
+    const { titulo, url, descripcion, likes } = req.body;
+    await newpost(titulo, url, descripcion, likes);
     res.send("Post agregado con éxito");
+    console.log("Datos recibidos:", req.body);
   });

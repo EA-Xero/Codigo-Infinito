@@ -17,7 +17,11 @@ function App() {
   };
 
   const agregarPost = async () => {
+    console.log("titulo:", titulo);
+  console.log("url:", imgSrc);
+  console.log("descripcion:", descripcion);
     const post = { titulo, url: imgSrc, descripcion };
+    console.log(post);
     await axios.post(urlBaseServer + "/posts", post);
     getPosts();
   };
