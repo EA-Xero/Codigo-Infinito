@@ -1,4 +1,4 @@
-const {leerposts,newpost,eliminarpost} = require("./consultas")
+const {leerposts,newpost} = require("./consultas")
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -20,14 +20,5 @@ app.post("/posts", async (req, res) => {
     const { titulo, url, descripcion, likes } = req.body;
     await newpost(titulo, url, descripcion, likes);
     res.send("Post agregado con éxito");
+    console.log("Datos recibidos:", req.body);
 });
-
-app.delete("/posts/:id",async(req,res) =>{
-    try{
-        const {id} = req.params
-        await eliminarpost(id)
-        res.send("post eliminado con exito")
-    }catch({code,message}){
-        res.status(code).send(message)
-    }
-})
