@@ -35,4 +35,38 @@ const HATE =  (inventario) =>{
     return HATEOAS
 }
 
-module.exports = {obtenerinventario,HATE}
+const obtenerinventarioconfiltros = async ({categoria,precio_max,precio_min,metal}) => {
+    let filtros = []
+    let valores = []
+    const agregarfiltro =  (campo,comparador,valor) => {
+        valores.push(valor)
+        const { length  } = filtros
+        if (typeof valor === 'string'){
+            filtros.push(`${campo} ${comparador} ${valor}`)
+        }
+        else {
+            filtros.push(`${campo} ${comparador} $${length + 1}`)
+          }
+    }
+    if (categoria){agregarfiltro('categoria ','= ',`'${categoria}' `)}
+    if (precio_max){agregarfiltro('precio ','<= ',`${precio_max} `)}
+    if (precio_min){agregarfiltro('precio ','>= ',`${precio_min} `)}
+    if (metal){agregarfiltro('metal ','= ',`'${metal}'`)}
+
+    let consulta = "select * from inventario"
+
+    if (filtros.length > 0){
+        filtros = filtros.join(" AND ")
+        consulta += ` Where ${filtros}`
+    }
+    
+    const client = await pool.connect()
+    try {
+      const { rows: inventario } = await client.query(consulta)
+      return inventario
+    } finally {
+      client.release()
+    }
+  }
+
+module.exports = {obtenerinventario,HATE,obtenerinventarioconfiltros}
