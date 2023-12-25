@@ -18,4 +18,21 @@ const obtenerinventario = async ({limits = 10,page = 0,order_by = "id_ASC"}) =>{
     return inventario
 }
 
-module.exports = {obtenerinventario}
+const HATE =  (inventario) =>{
+    const results = inventario.map((m) =>{
+        return{
+            name: m.nombre,
+            categoria:m.categoria,
+            precio:m.precio,
+            stock:m.stock,
+            href: `/inventario/joya/${m.id}`
+        }
+    }).slice(0,3)
+    const total = inventario.lenght
+    const HATEOAS = {
+        total, results
+    }
+    return HATEOAS
+}
+
+module.exports = {obtenerinventario,HATE}
