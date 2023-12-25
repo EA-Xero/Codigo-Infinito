@@ -4,6 +4,19 @@ const app = express()
 
 app.listen(3000,console.log("Server encendido"))
 
+const middle = (req,res,next) => {
+    const ruta = req.originalUrl
+    console.log(`Se ha hecho una consulta a la ruta:${ruta}`)
+    const send = res.send
+    res.send = function(body){
+        console.log(`La respuesta ha sido: ${body}`)
+        send.call(this,body)
+    }
+    next()
+}
+
+app.use(middle)
+
 app.get("/joyas", async (req,res) => {
     try{
         const { limits, page , order_by } = req.query
