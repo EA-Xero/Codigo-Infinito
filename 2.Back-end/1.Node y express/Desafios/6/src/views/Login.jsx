@@ -27,7 +27,7 @@ const Login = () => {
 
     axios.post(ENDPOINT.login, user)
       .then(({ data }) => {
-        window.sessionStorage.setItem('token', data.token)
+        window.sessionStorage.setItem('token', data)
         window.alert('Usuario identificado con éxito 😀.')
         setDeveloper({})
         navigate('/perfil')
