@@ -26,7 +26,7 @@ app.get("/eventos", async (req, res) => {
 app.post("/login", async (req, res) => {
     try {
         const { email, password } = req.body;
-        await verificarCredenciales(email, password);
+        /* await verificarCredenciales(email, password); */
         const token = jwt.sign({ email }, "az_AZ",{ expiresIn: 60 });
         res.send(token);
     } catch (error) {
@@ -39,6 +39,7 @@ app.delete("/eventos/:id", async (req, res) => {
     try {
         const { id } = req.params;
         const Authorization = req.header("Authorization");
+        console.log(Authorization)
         const token = Authorization.split("Bearer ")[1];
         jwt.verify(token, "az_AZ");
         const { email } = jwt.decode(token);
