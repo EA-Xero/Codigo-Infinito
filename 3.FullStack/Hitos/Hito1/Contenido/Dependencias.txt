@@ -1,0 +1,20 @@
+	Front-end
++React
++React-dom
++React-Router-dom
++Bootstrap
++Npm
++Vite
++Axios
++FontAwesome
++-Cors
+	Back-end
+-Npm
+-Nodemon
+-pg
+-json Web Token
+-Node
+-Express
+-Jest
+-Supertest
+-Cors

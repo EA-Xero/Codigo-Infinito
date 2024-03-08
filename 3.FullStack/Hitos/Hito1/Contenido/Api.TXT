@@ -1,0 +1,84 @@
+//POST /Productos
+request:
+    payload:
+    {
+
+        //info quien publico
+        mail: string
+        nombre: string
+
+        //info publicacion
+        titulo: string
+        img: string
+        descripcion: string
+        precio: Number
+    }
+    response:
+    {
+        "El Admin ${nombre} con mail ${mail} a publicado un Producto con titulo ${titulo}"
+    }
+
+//GET /Productos
+response:
+    {
+        titulo:string
+        img:string
+        descripcion:string
+        precio:Number
+    }
+
+//PUT Productos
+request:
+    payload:
+    {
+        //info quien edito
+        mail:string
+        nombre:string
+
+        //info que se edita
+        //algunos datos pueden ser nulos
+        id:Number
+        titulo:string
+        descripcion:string
+        precio:Number
+        img:string
+    }
+    response:
+    {
+        El admin ${nombre} con mail ${mail} a editado un Producto con id ${id}
+        //GET Productos
+    }
+
+//POST /sing-in/Usuarios
+request:
+    payload:
+    {
+
+        //info Usuarios
+        mail:string
+        nombre:string
+        apellido:string
+        img:string
+        pais:string
+        Direccion:string
+        password:string
+    }
+
+//POST /Login/Usuarios
+request:
+    payload:
+    {
+        mail:string
+        password:string
+    }
+    response:
+    {
+        id:Number
+        mail:string
+        nombre:string
+        apellido:string
+        img:string
+        pais:string
+        Direccion:string
+        telefono:string
+    }
