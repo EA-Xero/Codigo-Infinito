@@ -1,0 +1,95 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Collection Pizza",
+    "dateExported": "2024-02-20T15:40:49.928Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3133253e-6379-4f8d-99cf-720624ec824a",
+            "colId": "bbbdb77e-7caf-4751-b0e5-9adba3bef630",
+            "containerId": "",
+            "name": "Get /",
+            "url": "http://localhost:3000/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-19T02:27:36.450Z",
+            "modified": "2024-02-19T02:27:36.450Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d6fb7c69-87c4-49e3-96c2-e9e54d38bb4b",
+            "colId": "bbbdb77e-7caf-4751-b0e5-9adba3bef630",
+            "containerId": "",
+            "name": "Post /pizza",
+            "url": "http://localhost:3000/pizza",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-19T02:28:06.743Z",
+            "modified": "2024-02-20T15:39:16.190Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im1haWwiOiJlZGdhckBlZGdhci5jb20iLCJwYXNzd29yZCI6IjEyMzQ1In0sIlUiOiJhZG1pbiIsImlhdCI6MTcwODQzOTY0NCwiZXhwIjoxNzA4NDQwMjQ0fQ.5Gm_DFy00EYwMf7Y5miebb6JQ4qUt-Qi4aNltNgaRtA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Brazileña\",\n  \"description\":\"A\",\n  \"img\":\"https://www.shutterstock.com/shutterstock/photos/2026591040/display_1500/stock-photo-calabrian-sausage-pizza-typical-brazilian-pizza-on-wooden-board-over-table-background-pizza-2026591040.jpg\",\n  \"ingredientes\":\"[Mozzarella,Cebolla,Aceituna,Pepperonni]\",\n  \"price\": 9045\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "beba73fc-a723-4473-a02b-3a209c3928b2",
+            "colId": "bbbdb77e-7caf-4751-b0e5-9adba3bef630",
+            "containerId": "",
+            "name": "Put /pizza",
+            "url": "http://localhost:3000/pizza",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-02-19T02:28:13.642Z",
+            "modified": "2024-02-20T15:35:01.489Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im1haWwiOiJlZGdhckBlZGdhci5jb20iLCJwYXNzd29yZCI6IjEyMzQ1In0sIlUiOiJhZG1pbiIsImlhdCI6MTcwODQzOTY0NCwiZXhwIjoxNzA4NDQwMjQ0fQ.5Gm_DFy00EYwMf7Y5miebb6JQ4qUt-Qi4aNltNgaRtA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":28,\n  \"name\":\"Brazileña\",\n  \"description\":\"Caracoles\",\n  \"img\":\"https://www.shutterstock.com/shutterstock/photos/2026591040/display_1500/stock-photo-calabrian-sausage-pizza-typical-brazilian-pizza-on-wooden-board-over-table-background-pizza-2026591040.jpg\",\n  \"ingredientes\":\"[Mozzarella,Cebolla,Aceituna,Pepperonni]\",\n  \"price\": 9045\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a157a18d-8417-461a-820a-33ca6c57b72a",
+            "colId": "bbbdb77e-7caf-4751-b0e5-9adba3bef630",
+            "containerId": "",
+            "name": "Del /pizza",
+            "url": "http://localhost:3000/pizza",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-19T02:28:18.108Z",
+            "modified": "2024-02-20T15:21:38.622Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im1haWwiOiJlZGdhckBlZGdhci5jb20iLCJwYXNzd29yZCI6IjEyMzQ1In0sIlUiOiJhZG1pbiIsImlhdCI6MTcwODQzOTY0NCwiZXhwIjoxNzA4NDQwMjQ0fQ.5Gm_DFy00EYwMf7Y5miebb6JQ4qUt-Qi4aNltNgaRtA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":27\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Users",
+    "dateExported": "2024-02-19T02:28:53.255Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "30e1665b-f02c-41ee-9f77-dc9963781f7a",
+            "colId": "c52d064e-3d08-4a7b-aa3c-b92eeb948807",
+            "containerId": "",
+            "name": "Post /login",
+            "url": "http://localhost:3000/profile/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-19T02:28:27.986Z",
+            "modified": "2024-02-19T02:28:27.986Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"mail\":\"edgar@edgar.com\",\n  \"password\":\"12345\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4493b767-5f60-4bd5-8822-29e4eaa20275",
+            "colId": "c52d064e-3d08-4a7b-aa3c-b92eeb948807",
+            "containerId": "",
+            "name": "Post /register",
+            "url": "http://localhost:3000/profile/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-19T02:28:32.343Z",
+            "modified": "2024-02-19T02:28:32.343Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"eduardo\",\n  \"apellido\":\"luzardo\",\n  \"password\":\"123\",\n  \"telefono\":\"1234\",\n  \"pais\":\"Chile\",\n  \"direccion\":\"estacion\",\n  \"email\":\"eduardo@mail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
